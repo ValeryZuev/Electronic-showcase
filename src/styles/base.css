@@ -10,5 +10,5 @@ body {
   rendering-legibility antialiased bg-gradient-dark;
 }
 #app {
-  @apply flex place-items-center h-full;
+  @apply flex min-h-dvh w-full h-full;
 }
