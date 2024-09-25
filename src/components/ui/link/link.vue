@@ -60,6 +60,9 @@ const isExternal =
         border-2 border-solid border-image-green-rose border-image-1;
       }
     }
+    &-red-outline {
+      @apply border-2 border-red-base;
+    }
   }
   &.size {
     &-micro {
