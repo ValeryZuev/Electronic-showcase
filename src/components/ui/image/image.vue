@@ -44,7 +44,7 @@ if (isSources) { MODERN_EXTENSTIONS.unshift(srcExt) }
         :type="'image/' + item">
     </template>
     <img
-      class="block h-full w-full object-cover"
+      class="block h-full w-full object-contain"
       :src="src"
       :alt="props.alt"
       @error="emit('error', $event)">
