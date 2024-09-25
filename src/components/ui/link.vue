@@ -49,7 +49,7 @@ const isExternal =
   @apply font-medium text-center xl:transition-all;
   &.type {
     &-primary {
-      @apply text-green-base hover:opacity-50;
+      @apply text-green-base;
     }
     &-green-rose {
       @apply relative rounded overflow-hidden hover:opacity-50
