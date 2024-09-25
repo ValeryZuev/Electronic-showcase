@@ -4,6 +4,7 @@ const TYPES = {
   primary: 'primary',
   secondary: 'secondary',
   'green-rose': 'green-rose',
+  'red': 'red',
   'red-outline': 'red-outline'
 }
 
