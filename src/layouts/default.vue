@@ -4,7 +4,7 @@ import Footer from '@/components/blocks/layout/footer.vue'
 </script>
 
 <template>
-  <div class="container flex flex-col gap-4 pt-8 flex-1">
+  <div class="container flex flex-col gap-4 pt-4 flex-1">
     <Header />
     <main>
       <RouterView />
