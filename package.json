@@ -32,6 +32,8 @@
     "postcss": "^8.4.47",
     "prettier": "^3.2.5",
     "start-server-and-test": "^2.0.4",
+    "sass": "^1.77.8",
+    "sass-loader": "^10.5.2",
     "tailwindcss": "^3.4.13",
     "tailwindcss-text-rendering": "^1.0.2",
     "vite": "^5.3.1",
