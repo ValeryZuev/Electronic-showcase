@@ -1,6 +1,8 @@
 import { defineStore } from 'pinia'
 
 export const useBasket = defineStore('basket', {
-  state: () => ({}),
+  state: () => ({
+    items: []
+  }),
   actions: {}
 })
