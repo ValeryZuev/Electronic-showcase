@@ -4,6 +4,7 @@ export default [
     url: '/products/categories',
     api: 'api',
     httpMethod: 'get',
+    handler: 'normalizeCategories',
     store: { name: 'showcase', key: 'categories', },
     doc: {
       params: [],
