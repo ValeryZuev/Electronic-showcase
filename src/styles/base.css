@@ -6,9 +6,12 @@
 
 body {
   @apply flex place-items-center justify-center min-h-dvh
-  font-base text-base font-medium text-white-soft
-  rendering-legibility antialiased bg-gradient-dark;
+  font-base text-base font-medium text-white-base
+  rendering-legibility antialiased bg-black-soft;
 }
 #app {
   @apply flex min-h-dvh w-full h-full;
+}
+.container {
+  @apply pl-4 pr-4 mx-auto;
 }
