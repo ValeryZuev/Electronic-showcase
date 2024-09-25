@@ -3,7 +3,8 @@ import { computed } from 'vue'
 const TYPES = {
   primary: 'primary',
   secondary: 'secondary',
-  'green-rose': 'green-rose'
+  'green-rose': 'green-rose',
+  'red-outline': 'red-outline'
 }
 
 const SIZES = {
