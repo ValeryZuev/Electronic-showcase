@@ -1,3 +1,7 @@
-import pages from './pages.js'
+import Pages from './pages.js'
+import Images from './images.js'
 
-export default { pages }
+export const pages = Pages
+export const images = Images
+
+export default { pages, images }
