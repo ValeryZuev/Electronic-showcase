@@ -3,15 +3,19 @@
 *::after {
   @apply font-medium m-0 box-border;
 }
-
+html {
+  @apply h-full scroll-smooth;
+}
 body {
-  @apply flex place-items-center justify-center min-h-dvh
-  font-base text-base font-medium text-white-base
+  @apply min-h-dvh h-full font-base text-base font-medium text-white-base
   rendering-legibility antialiased bg-black-soft;
 }
 #app {
-  @apply flex min-h-dvh w-full h-full;
+  @apply flex flex-col w-full min-h-dvh;
 }
 .container {
   @apply pl-4 pr-4 mx-auto;
+}
+main {
+  @apply flex-1;
 }
