@@ -47,6 +47,9 @@ export default {
         },
         green: {
           base: '#07FF53'
+        },
+        red: {
+          base: '#c4151c'
         }
       },
       backgroundImage: {
