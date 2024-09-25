@@ -4,9 +4,11 @@ import Footer from '@/components/blocks/layout/footer.vue'
 </script>
 
 <template>
-  <div class="container flex flex-col pt-8 flex-1">
+  <div class="container flex flex-col gap-4 pt-8 flex-1">
     <Header />
-    <main></main>
+    <main>
+      <RouterView />
+    </main>
     <Footer>
       &#169; {{ new Date().getFullYear() }} Все права защищены.
     </Footer>
