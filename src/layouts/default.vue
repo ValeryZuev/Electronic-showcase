@@ -6,7 +6,7 @@ import Footer from '@/components/blocks/layout/footer.vue'
 <template>
   <div class="container flex flex-col gap-4 pt-4 flex-1">
     <Header />
-    <main>
+    <main class="flex flex-col">
       <RouterView />
     </main>
     <Footer>
