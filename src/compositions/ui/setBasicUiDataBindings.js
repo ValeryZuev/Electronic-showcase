@@ -10,6 +10,9 @@ export const setBasicUiDataBindings = (emit) => {
       if (checked !== 'undefined' && type === 'checkbox') {
         model = checked
       }
+      if (type === 'number') {
+        model = Number(model)
+      }
       emit('update:modelValue', model)
       emit('change', model)
 
