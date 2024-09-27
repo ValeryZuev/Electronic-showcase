@@ -6,8 +6,11 @@ import PillBadge from '@/components/ui/pill-badge/pill-badge.vue'
 import { pages, images } from '@/config/project/index.js'
 
 import { useBasket } from '@/stores/basket.js'
+import { computed } from 'vue'
 
-const { items } = useBasket()
+const basketStore = useBasket()
+
+const basketItemsCount = computed(() => Object.keys(basketStore.items))
 </script>
 
 <template>
@@ -24,9 +27,9 @@ const { items } = useBasket()
     <Link class="relative" :href="pages.basket" type="secondary">
       <Icon name="shopping-cart" size="middle"/>
       <PillBadge
-        v-if="items.length"
+        v-if="basketItemsCount.length"
         size="normal">
-        {{ items.length }}
+        {{ basketItemsCount.length }}
       </PillBadge>
     </Link>
   </header>
