@@ -9,7 +9,7 @@ const props = defineProps({
     required: true
   }
 })
-const emit = defineEmits(['onAddToCart'])
+const emit = defineEmits(['onAddToCart', 'onChangeItemCart'])
 </script>
 
 <template>
@@ -21,9 +21,25 @@ const emit = defineEmits(['onAddToCart'])
       <div class="">
         {{ data.title }}
       </div>
-      <div class="flex items-center justify-between text-xl mt-auto">
+
+      <div
+        class="flex items-center justify-between text-xl mt-auto">
         {{ data.price }} ₽
+        <div
+          v-if="data.count"
+          class="flex items-center gap-4">
+          <Icon
+            class="cursor-pointer hover:text-red-base"
+            name="minus"
+            @click="emit('onChangeItemCart', { id: data.id, type: 'dec' })" />
+          {{ data.count }}
+          <Icon
+            class="cursor-pointer hover:text-red-base"
+            name="plus"
+            @click="emit('onChangeItemCart', { id: data.id, type: 'inc' })" />
+        </div>
         <Button
+          v-else
           type="red"
           size="small"
           @click="emit('onAddToCart', data)">

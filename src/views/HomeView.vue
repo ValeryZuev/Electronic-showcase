@@ -35,8 +35,9 @@ onMounted(() => {
           :key="item?.id ?? index"
           :loading="showcaseStore.isLoading">
           <Product
-            :data="item"
-            @onAddToCart="basketStore.addToCart"/>
+            :data="{ ...item, count: basketStore.items[item.id]?.count }"
+            @onAddToCart="basketStore.addToCart"
+            @onChangeItemCart="basketStore.changeCountItem($event)" />
         </ProductLoader>
       </div>
       <Empty v-else>

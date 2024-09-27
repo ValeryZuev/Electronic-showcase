@@ -59,12 +59,12 @@ const checkout = () => {
           <Icon
             class="cursor-pointer hover:text-red-base"
             name="minus"
-            @click="basketStore.changeCountItem(id, 'dec')" />
+            @click="basketStore.changeCountItem({id, type: 'dec'})" />
           {{ count }}
           <Icon
             class="cursor-pointer hover:text-red-base"
             name="plus"
-            @click="basketStore.changeCountItem(id, 'inc')" />
+            @click="basketStore.changeCountItem({ id, type: 'inc' })" />
         </div>
       </template>
       <template #row-total="{ price, count }">

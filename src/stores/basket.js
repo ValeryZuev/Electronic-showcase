@@ -39,7 +39,7 @@ export const useBasket = defineStore('basket', {
       this.items = {}
       this.saveStateToSession()
     },
-    changeCountItem(id, type) {
+    changeCountItem({ id, type }) {
       if (!type || !id) return
 
       switch (type) {
