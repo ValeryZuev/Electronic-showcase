@@ -4,7 +4,7 @@
       <slot name="default" />
     </template>
     <template v-else>
-      <h2 class="text-center">По вашему запросу ничего не найдено</h2>
+      <div class="text-2xl text-center">По вашему запросу ничего не найдено</div>
     </template>
   </section>
 </template>
