@@ -30,7 +30,7 @@ const createCustomUrl = (url, urlParams) => {
   const params = { ...urlParams }
   let urlWithParams = url
   for (const key in urlParams) {
-    if (url.indexOf(`{${key}}`) !== NOT_FINDED_INDEX) {
+    if (url.indexOf(`{${key}}`) !== NOT_FOUNDED_INDEX) {
       urlWithParams = urlWithParams.replace(`{${key}}`, urlParams[key])
       delete params[key]
     }
