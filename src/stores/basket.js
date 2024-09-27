@@ -35,6 +35,10 @@ export const useBasket = defineStore('basket', {
       delete this.items[id]
       this.saveStateToSession()
     },
+    clearCart() {
+      this.items = {}
+      this.saveStateToSession()
+    },
     changeCountItem(id, type) {
       if (!type || !id) return
 

@@ -8,8 +8,12 @@ import Table from '@/components/ui/table/table.vue'
 
 import { pages } from '@/config/project/index.js'
 import { useBasket } from '@/stores/basket.js'
+import { usePopup } from '@/stores/popup.js'
+import { useRouter } from "vue-router";
 
 const basketStore = useBasket()
+const popupStore = usePopup()
+const router = useRouter()
 
 const header = [
   { id: 'index', title: '№'},
@@ -18,6 +22,14 @@ const header = [
   { id: 'price', title: 'Ценв за ед.'},
   { id: 'total', title: 'Итого'}
 ]
+
+const checkout = () => {
+  popupStore.open('order')
+    .then(() => {
+      basketStore.clearCart()
+      router.push(pages.home)
+    })
+}
 </script>
 
 <template>
@@ -65,7 +77,8 @@ const header = [
         Всего товаров {{ basketStore.sumOfCounts.count }} на сумму {{ basketStore.sumOfCounts.sum.toFixed(2) }} ₽
       </h4>
       <Button
-        type="red">
+        type="red"
+        @click="checkout">
         Оформить заказ
       </Button>
     </div>
