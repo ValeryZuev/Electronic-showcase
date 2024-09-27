@@ -1,7 +1,7 @@
-const storage = localStorage
+const storage = sessionStorage
 
 export default {
-  async get (key) {
+  get (key) {
     const value = storage.getItem(key)
     return JSON.parse(value)
   },
