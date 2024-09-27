@@ -1,4 +1,5 @@
 <script setup>
+import Empty from '@/components/blocks/layout/empty.vue'
 import Product from '@/components/blocks/product/product.vue'
 import ProductLoader from '@/components/ui/loader/loader.vue'
 import Sidebar from '@/components/blocks/sidebar/sidebar.vue'
@@ -22,11 +23,11 @@ onMounted(() => {
       :filters="showcaseStore.filters"
       @onApplyFilters="showcaseStore.applyFilters"
       @onResetFilters="showcaseStore.resetFilters" />
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8 h-full">
       <div>
         <h1>{{ showcaseStore.currentCategory?.label }}</h1>
       </div>
-      <div class="grid grid-cols-4 gap-8">
+      <div v-if="showcaseStore.products.length" class="grid grid-cols-4 gap-8">
         <ProductLoader
           v-for="(item, index) of showcaseStore.products"
           :key="item?.id ?? index"
@@ -34,6 +35,8 @@ onMounted(() => {
           <Product :data="item" />
         </ProductLoader>
       </div>
+      <Empty v-else>
+      </Empty>
     </div>
   </section>
 </template>
