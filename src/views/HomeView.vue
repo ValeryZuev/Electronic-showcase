@@ -4,9 +4,11 @@ import Product from '@/components/blocks/product/product.vue'
 import ProductLoader from '@/components/ui/loader/loader.vue'
 import Sidebar from '@/components/blocks/sidebar/sidebar.vue'
 
+import { useBasket } from '@/stores/basket.js'
 import { useShowcase } from '@/stores/showcase.js'
-import { onMounted } from "vue";
+import { onMounted } from 'vue'
 
+const basketStore = useBasket()
 const showcaseStore = useShowcase()
 
 onMounted(() => {
@@ -32,7 +34,9 @@ onMounted(() => {
           v-for="(item, index) of showcaseStore.products"
           :key="item?.id ?? index"
           :loading="showcaseStore.isLoading">
-          <Product :data="item" />
+          <Product
+            :data="item"
+            @onAddToCart="basketStore.addToCart"/>
         </ProductLoader>
       </div>
       <Empty v-else>
