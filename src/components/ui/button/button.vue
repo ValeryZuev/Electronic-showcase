@@ -45,6 +45,9 @@ const { classes } = setBasicUiProps(props, 'button-component')
     &-red {
       @apply bg-red-base;
     }
+    &-red-outline {
+      @apply bg-transparent border-2 border-red-base;
+    }
   }
   &.size {
     &-micro {
