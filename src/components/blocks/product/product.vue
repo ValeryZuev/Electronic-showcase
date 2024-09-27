@@ -9,6 +9,7 @@ const props = defineProps({
     required: true
   }
 })
+const emit = defineEmits(['onAddToCart'])
 </script>
 
 <template>
@@ -22,7 +23,10 @@ const props = defineProps({
       </div>
       <div class="flex items-center justify-between text-xl mt-auto">
         {{ data.price }} ₽
-        <Button type="red" size="small">
+        <Button
+          type="red"
+          size="small"
+          @click="emit('onAddToCart', data)">
           <Icon name="add-shopping-cart" size="normal"/>
         </Button>
       </div>
