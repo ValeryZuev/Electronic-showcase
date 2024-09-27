@@ -16,6 +16,7 @@ export default [
     url: '/products',
     api: 'api',
     httpMethod: 'get',
+    handler: 'normalizeProducts',
     store: { name: 'showcase', key: 'products', },
     doc: {
       params: [
@@ -31,6 +32,7 @@ export default [
     api: 'api',
     httpMethod: 'get',
     hasUrlParams: true,
+    handler: 'normalizeProducts',
     store: { name: 'showcase', key: 'products', },
     doc: {
       params: [
