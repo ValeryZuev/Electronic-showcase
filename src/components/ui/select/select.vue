@@ -107,7 +107,7 @@ const choose = (index) => {
     :class="[{ 'z-10': isOpen }, classes]">
     <div
       class="select-component-label group"
-      :class="[isOpen ? 'rounded-t' : 'rounded']"
+      :class="[isOpen ? 'rounded-t-sm' : 'rounded-sm']"
       tabindex="-1"
       @click="toggle">
       <template v-if="!isSomethingSelected">
@@ -160,7 +160,7 @@ const choose = (index) => {
     @apply flex items-center gap-2 h-full px-4 py-2 cursor-pointer;
   }
   &-options {
-    @apply absolute top-full left-0 min-w-full py-1 rounded-b;
+    @apply absolute top-full left-0 min-w-full py-1 rounded-b-sm;
     & > * {
       @apply flex items-center gap-2 h-full px-4 py-2 cursor-pointer xl:transition-all;
       &:hover {
