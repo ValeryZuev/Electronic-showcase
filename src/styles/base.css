@@ -30,3 +30,12 @@ h3 {
 h4 { @apply text-base md:text-xl; }
 h5 { @apply text-base md:text-lg; }
 h6 { @apply text-base; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
