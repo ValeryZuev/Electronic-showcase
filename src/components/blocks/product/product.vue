@@ -16,7 +16,7 @@ const props = defineProps({
     <div class="shrink-0 w-full h-60 bg-white-base p-4">
       <Image class="block w-full h-full" :src="data.image" :alt="data.title" />
     </div>
-    <div class="flex flex-col h-full gap-4 px-4 py-2">
+    <div class="flex flex-col h-full gap-4 px-4 py-4">
       <div class="">
         {{ data.title }}
       </div>
