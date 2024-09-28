@@ -9,7 +9,7 @@ import Table from '@/components/ui/table/table.vue'
 import { pages } from '@/config/project/index.js'
 import { useBasket } from '@/stores/basket.js'
 import { usePopup } from '@/stores/popup.js'
-import { useRouter } from "vue-router";
+import { useRouter } from 'vue-router'
 
 const basketStore = useBasket()
 const popupStore = usePopup()
