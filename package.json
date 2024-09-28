@@ -7,11 +7,6 @@
     "dev": "vite --port 5000 --host",
     "build": "vite build",
     "preview": "vite preview --port 5000 --host",
-    "test:unit": "vitest",
-    "test:e2e": "start-server-and-test preview http://127.0.0.1:5000 'cypress run --e2e'",
-    "test:e2e:dev": "start-server-and-test 'vite dev --port 5000' http://127.0.0.1:5000 'cypress open --e2e'",
-    "lint": "eslint Electronic-showcase --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src"
   },
   "dependencies": {
     "pinia": "^2.1.7",
